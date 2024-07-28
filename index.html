@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Student Details</h2>
+            <form id="studentForm" onsubmit="updateCard(event)">
+                <label for="schoolName">School Name:</label>
+                <input type="text" id="schoolNameVal" name="schoolName">
+
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" name="studentName">
+
+                <label for="dob">Date Of Birth:</label>
+                <input type="date" id="dob" name="dob">
+
+                <label for="class">Class:</label>
+                <input type="text" id="class" name="class">
+
+                <label for="rollNumber">Roll Number:</label>
+                <input type="text" id="rollNumber" name="rollNumber">
+
+                <label for="mobileNumber">Mobile Number:</label>
+                <input type="text" id="mobileNumber" name="mobileNumber">
+
+                <label for="profilePhoto">Upload profile photo:</label>
+                <input type="file" id="profilePhoto" name="profilePhoto">
+
+                <div class="button-container">
+                    <button type="submit" class="submit-btn">Submit</button>
+                    <button type="reset" class="reset-btn ml-btn">Clear All</button>
+                </div>
+            </form>
+        </div>
+        <div class="display-container">
+            <div id="schoolName">School Name</div>
+            <div class="profile-pic">
+                <img id="displayProfilePhoto" src="assets/abc.jpg" alt="Profile">
+            </div>
+            <p id="displayStudentName">Student Name: </p>
+            <p id="displayDob">Date of Birth: </p>
+            <p id="displayClass">Class: </p>
+            <p id="displayRollNumber">Roll Number: </p>
+            <p id="displayContactNumber">Contact Number: </p>
+            <div class="button-container">
+                <button type="submit" class="print-btn mt-top" onclick="printCard()">Print Id Card</button>
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+        document.getElementById('fetchDataButton').addEventListener('click', () => {
+            fetch('/api/data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('dataContainer').innerText = data.message;
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+    </script> -->
+</body>
+</html>
